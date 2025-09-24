@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-work: "Work Sans", sans-serif;
+  --shadow-3xl: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: var(--font-work);
+}
+
+.inputs-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-control label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea {
+    box-shadow: var(--shadow-3xl);
+}
+
+textarea {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 6px;
+  resize: none;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.back {
+  padding: 8px 16px 8px 6px;
+}
+
+.next {
+  padding: 8px 6px 8px 16px;
+}
