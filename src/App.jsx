@@ -7,7 +7,7 @@ import PartFour from "./components/PartFour";
 import { useState } from "react";
 import LastPart from "./components/LastPart";
 import Thanks from "./components/Thanks";
-import { CustomHook } from "./hooks/customHook";
+import useForm from "./hooks/useForm";
 
 const objTemplate = {
   name: "",
@@ -34,16 +34,15 @@ function App() {
   ];
 
   const { currentStep, currentComponent, changeStep, isFirstStep, isLastStep } =
-    CustomHook(formComponents);
+    useForm(formComponents);
 
   return (
     <div className="min-h-screen place-items-center bg-zinc-900 p-4">
       <div className="bg-zinc-800 text-white px-6 py-10 rounded-xl mt-4 max-w-[700px] shadow-3xl ">
         <div className="flex flex-col items-center gap-4 text-center">
-          <h1 className="text-2xl">Preencha o formulário por favor.</h1>
-          <p>
-            Apenas uma brincadeirinha que eu fiz só para colocar em <br />{" "}
-            prática o que eu estudei 😀😁
+          <h1 className="text-2xl">Preencha o formulário.</h1>
+          <p className="max-w-[420px]">
+            Apenas uma brincadeirinha que eu fiz só para colocar em prática o que eu estudei 😀😁
           </p>
         </div>
 

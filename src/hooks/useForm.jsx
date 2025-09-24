@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const CustomHook = (steps) => {
+const useForm = (steps) => {
   const [currentStep, setCurentStep] = useState(0);
 
   const changeStep = (i, e) => {
@@ -19,3 +19,5 @@ export const CustomHook = (steps) => {
     isLastStep: currentStep + 1 === steps.length ? true : false,
   };
 };
+
+export default useForm
