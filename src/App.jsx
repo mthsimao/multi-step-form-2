@@ -1,13 +1,13 @@
 import { ChevronLeft } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import "./App.css";
-import { Hook } from "./hooks/hook";
 import PartTwo from "./components/PartTwo";
 import PartThree from "./components/PartThree";
 import PartFour from "./components/PartFour";
 import { useState } from "react";
 import LastPart from "./components/LastPart";
 import Thanks from "./components/Thanks";
+import { CustomHook } from "./hooks/customHook";
 
 const objTemplate = {
   name: "",
@@ -34,7 +34,7 @@ function App() {
   ];
 
   const { currentStep, currentComponent, changeStep, isFirstStep, isLastStep } =
-    Hook(formComponents);
+    CustomHook(formComponents);
 
   return (
     <div className="min-h-screen place-items-center bg-zinc-900 p-4">

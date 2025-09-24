@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Hook = (steps) => {
+export const CustomHook = (steps) => {
   const [currentStep, setCurentStep] = useState(0);
 
   const changeStep = (i, e) => {
